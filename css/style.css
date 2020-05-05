@@ -1,0 +1,651 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+
+/*---------------------------------------
+   Navbar
+-----------------------------------------*/
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 6px;
+    cursor: default;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+nav {
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    line-height: 60px;
+    transition: 0.5s;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav.merah ul {
+    background:red;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav ul li a:hover {
+    padding: auto;
+    text-decoration: none;
+    color: white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: red;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 990px) {
+
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: rgba(255, 0, 0, 0.8);
+    }
+
+    nav.merah ul {
+        background: rgba(255, 0, 0, 0.8);
+    }
+
+    .showing {
+        max-height: 32em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+}
+
+/*---------------------------------------
+   Header
+-----------------------------------------*/
+header {
+    width: 100%;
+    height: 90vh;
+    background: url(../gambar/DDBUB.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.header {
+    position: absolute;
+    color: white;
+    top: 85%;
+    background-color: red;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header .p1 {
+    margin: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), step-end infinite;
+    -webkit-animation: typing 5s infinite;
+    -moz-animation: typing 5s infinite;
+    animation: typing 5s infinite;
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 4s;
+    letter-spacing: 2px;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/*---------------------------------------
+   Notifikasi             
+-----------------------------------------*/
+/*.headline-notifikasi {
+  display: block;
+  position: absolute;
+  font-family: arial;
+  font-size: 13px;
+  margin-top: -19px;
+  color: white;
+  text-decoration: none;
+  cursor: default;
+}
+
+.headline-notifikasi:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.judul-notifikasi {
+  background-color: #FFEA00;
+  display: block;
+  height: 30px;
+  width: 90px;
+  font-family: arial;
+  font-size: 11px;
+  position: absolute;
+  top: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-top: 10px;
+  padding-left: 10px;
+  z-index: 3;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+#background-notifikasi {
+  height: 30px;
+  width: 100%;
+  background-color: red;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+#notifikasi {
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.animasi {
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 0.2s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+}
+
+.jedah-animasi {
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.jedah-animasi2 {
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    margin-left: 110%;
+  }
+
+  to {
+    margin-left: -50%;
+  }
+}
+
+.kotak {
+  animation: fadein 3s linear infinite;
+  -webkit-animation-duration: 20s;
+  -moz-animation-duration: 20s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 1s;
+}*/
+
+/*---------------------------------------
+   G-map
+-----------------------------------------*/
+#Lokasi {
+    padding-top: 20px;
+    border-top-style: double;
+    border-top-color: red;
+    margin-bottom: 30px;
+}
+
+.logoUB {
+    width: 50px;
+    height: 65px;
+    padding-bottom: 10px;
+}
+
+.contentUB {
+    background-color: lightgrey;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding-top: 35px;
+}
+
+/*---------------------------------------
+    Box konten/ Profil
+-----------------------------------------*/
+.box-konten {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    padding-top: 100px;
+    border-top-style: double;
+    border-top-color: red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.box-konten .kotak {
+    position: relative;
+    width: 350px;
+    left: 0;
+    margin: 0 auto;
+    background: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+}
+
+@media(max-width: 786px) {
+    .box-konten .kotak {
+        width: 300px;
+    }
+}
+
+.box-konten .kotak .tampilan {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    background: linear-gradient(red, tomato, yellow);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.box-konten .kotak:hover .tampilan {
+    top: 0;
+}
+
+.box-konten .kotak .content {
+    position: relative;
+    z-index: 2;
+}
+
+.box-konten .kotak .content p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.box-konten .kotak .content img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+}
+
+.box-konten .kotak .content .details h2 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.box-konten .kotak .content h2 span {
+    font-size: 30px;
+    transition: 0.5s;
+    background: linear-gradient(to right, tomato, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box-konten .kotak:hover .content h2 span {
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box-konten .kotak:hover .content h2 {
+    color: red;
+}
+
+.counting1 {
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: red;
+}
+
+.counting1:hover {
+    color: red;
+    background: rgba(0, 0, 0, .2);
+}
+
+.counting1 h2 {
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.counting2 {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: black;
+}
+
+.counting2:hover {
+    color: black;
+    background: rgba(0, 0, 0, .2);
+}
+
+.counting2 h2 {
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+/*---------------------------------------
+    Slideshow
+-----------------------------------------*/
+#gallery {
+    border-top-style: double;
+    border-top-color: red;
+}
+
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*jssor slider bullet skin 051 css*/
+.jssorb051 .i {
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssorb051 .i .b {
+    fill: #fff;
+    fill-opacity: 0.5;
+}
+
+.jssorb051 .i:hover .b {
+    fill-opacity: .7;
+}
+
+.jssorb051 .iav .b {
+    fill-opacity: 1;
+}
+
+.jssorb051 .i.idn {
+    opacity: .3;
+}
+
+/*jssor slider arrow skin 051 css*/
+.jssora051 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssora051 .a {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 360;
+    stroke-miterlimit: 10;
+}
+
+.jssora051:hover {
+    opacity: .8;
+}
+
+.jssora051.jssora051dn {
+    opacity: .5;
+}
+
+.jssora051.jssora051ds {
+    opacity: .3;
+    pointer-events: none;
+}
+
+#jssor_1 {
+    position: relative;
+    margin: 10px auto;
+    top: 0px;
+    left: 0px;
+    width: 980px;
+    height: 380px;
+    overflow: hidden;
+    visibility: hidden;
+
+}
+
+.jssorl-009-spin {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.jssorl-090-spin {
+    cursor: default;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 980px;
+    height: 380px;
+    overflow: hidden;
+}
+
+.jssorb051 {
+    position: absolute;
+    bottom: 12px;
+    right: 12px
+}
+
+.jssora051 {
+    width: 55px;
+    height: 55px;
+    top: 0px;
+}
+
+/*---------------------------------------
+   Sponsor
+-----------------------------------------*/
+#sponsors img {
+    margin-top: 18px;
+}
+
+/*---------------------------------------
+   Footer
+-----------------------------------------*/
+footer {
+    background-attachment: fixed;
+    clear: both;
+    text-align: center;
+    border-top-style: double;
+    border-top-color: red;
+    padding-top: 20px;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+/*---------------------------------------
+   Social icon
+-----------------------------------------*/
+.social-icon {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icon li {
+    display: inline-block;
+    margin: 0px 10px;
+    list-style: none;
+}
+
+.social-icon li a {
+    color: #666;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all .7s ease-in-out;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.social-icon li a:hover {
+    color: red;
+}
+
+/*---------------------------------------
+   Back to top
+-----------------------------------------*/
+
+#linkToTop {
+    display: inline-block;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#linkToTop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: red;
+}
+
+#linkToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
